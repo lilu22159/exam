@@ -1,10 +1,13 @@
-/* styles.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
 }
-
 header {
     background-color: #333;
     color: white;
@@ -26,47 +29,51 @@ nav ul li a {
     color: white;
     text-decoration: none;
 }
-
-.banner-carousel {
+.carousel {
     position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: 2rem auto;
+    width: 80%;
+    max-width: 800px;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.carousel-container {
+.carousel-inner {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel-slide {
+.carousel-item {
     min-width: 100%;
     box-sizing: border-box;
 }
 
-.carousel-slide img {
+.carousel-item img {
     width: 100%;
-    display: block;
+    border-radius: 10px;
 }
 
-.carousel-controls {
+.carousel-control {
     position: absolute;
     top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
     transform: translateY(-50%);
-}
-
-.carousel-controls button {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 0.5rem;
+    padding: 10px;
     cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
 }
 
-.carousel-controls button:hover {
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-control:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }

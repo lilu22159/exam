@@ -1,44 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>静态首页</title>
-    <link rel="stylesheet" href="test.css">
+    <title>图片轮播示例</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <!-- 目录栏内容 -->
-            <ul>
-                <li><a href="#">首页</a></li>
-                <li><a href="#">关于我们</a></li>
-                <li><a href="#">服务</a></li>
-                <li><a href="#">联系我们</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="banner-carousel">
-            <!-- 轮播图内容 -->
-            <div class="carousel-container">
-                <div class="carousel-slide active">
-                    <img src="image1.jpg" alt="Banner 1">
-                </div>
-                <div class="carousel-slide">
-                    <img src="image2.jpg" alt="Banner 2">
-                </div>
-                <div class="carousel-slide">
-                    <img src="image3.jpg" alt="Banner 3">
-                </div>
-           
+	<header>
+	    <nav>
+	        <!-- 目录栏内容 -->
+	        <ul>
+	            <li><a href="#">首页</a></li>
+	            <li><a href="#">关于我们</a></li>
+	            <li><a href="#">服务</a></li>
+	            <li><a href="#">联系我们</a></li>
+	        </ul>
+	    </nav>
+	</header>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="image1.jpg" alt="图片1">
             </div>
-            <div class="carousel-controls">
-                <button class="prev">&#10094;</button>
-                <button class="next">&#10095;</button>
+            <div class="carousel-item">
+                <img src="image2.jpg" alt="图片2">
             </div>
-        </section>
-    </main>
-    <script src="test.js"></script>
+            <div class="carousel-item">
+                <img src="image3.jpg" alt="图片3">
+            </div>
+        </div>
+        <button class="carousel-control prev" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-control next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
